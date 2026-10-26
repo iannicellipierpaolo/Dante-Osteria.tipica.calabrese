@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dante. Osteria tipica calabrese, pasta fatta in casa, vini e distillati. Demo di presentazione.">
+  <meta name="theme-color" content="#141311">
+  <title>Dante — Osteria tipica calabrese</title>
+  <link rel="icon" href="assets/dantenero.png" type="image/png">
+  <link rel="preload" href="assets/hero-poster.jpg" as="image">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- FASCIA DEMO SUPERIORE -->
+<div class="top-demo-bar" role="banner">
+  <div class="top-demo-inner">
+    
+    <!-- TESTO 1 (Sinistra) -->
+    <span class="demo-col demo-col-left">Un assaggio di futuro</span>
+    
+    <!-- TESTO 2 (Centro) -->
+    <span class="demo-col demo-col-center">Demo di progetto · non è il sito ufficiale</span>
+    
+    <!-- TESTO 3 (Destra) -->
+    <div class="demo-col demo-col-right">
+      <button type="button" class="btn-demo-link" id="btn-open-proposal">
+        Scopri la proposta <span class="arrow-icon" aria-hidden="true">↗</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- POPUP MODALE "SCOPRI LA PROPOSTA" -->
+<div class="demo-modal-backdrop" id="demo-modal" aria-hidden="true">
+  <div class="demo-modal-dialog" role="dialog" aria-labelledby="demo-modal-title">
+    <button type="button" class="btn-close-modal" id="btn-close-proposal" aria-label="Chiudi popup">×</button>
+    
+    <span class="section-tag">Proposta Digitale</span>
+    <h3 id="demo-modal-title" class="demo-modal-title">Dante Osteria tipica calabrese · Soluzione Web</h3>
+    
+    <p class="demo-modal-desc">
+      Questo progetto dimostrativo è stato realizzato su misura per valorizzare l'identità di Dante: un'autentica esperienza calabrese.
+    </p>
+
+    <ul class="demo-modal-features">
+      <li><strong>Identità visiva:</strong> Video e immagini per raccontare la qualità autentica.</li>
+      <li><strong>Accesso diretto:</strong> Navigazione laterale a schede per una consultazione immediata.</li>
+      <li><strong>Ottimizzazione:</strong> Esperienza fluida e reattiva su tutti i dispositivi.</li>
+    </ul>
+
+  </div>
+</div>
+
+
+  <a class="skip-link" href="#cucina">Vai al contenuto</a>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#inizio" aria-label="Dante, torna all'inizio">
+      <img class="brand-white" src="assets/dantewhite.png" width="447" height="447" alt="Dante — Osteria tipica calabrese">
+      <img class="brand-black" src="assets/dantenero.png" width="447" height="447" alt="" aria-hidden="true">
+    </a>
+    <p class="header-descriptor">Osteria tipica calabrese</p>
+    <div class="header-actions"><a class="header-book" href="#prenota" data-book>Prenota un tavolo <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-label="Apri navigazione" aria-controls="navigation" aria-expanded="false" hidden><span></span><span></span></button></div>
+  </header>
+
+  <dialog id="navigation" class="navigation" aria-label="Navigazione principale">
+    <div class="dialog-top"><span class="eyebrow">Osteria Dante</span><button class="icon-close" data-close="navigation" aria-label="Chiudi navigazione">×</button></div>
+    <div class="navigation-body"><nav aria-label="Menu principale"><a href="#cucina"><span>01</span> La cucina</a><a href="#piatti"><span>02</span> I piatti</a><a href="#menu"><span>03</span> Il menu</a><a href="#cantina"><span>04</span> La cantina</a><a href="#ospitalita"><span>05</span> A tavola</a><a href="#contatti"><span>06</span> Vieni a trovarci</a></nav></div>
+    <div class="navigation-bottom"><span>Bar · Lounge bar · Osteria</span><a class="text-link" href="#prenota" data-book>Un tavolo da Dante <span aria-hidden="true">↗</span></a></div>
+  </dialog>
+
+  <main>
+    <!-- Il filmato riunisce tutti e tre i loop ricevuti, senza sfocature. -->
+    <section class="hero" id="inizio" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"><img src="assets/hero-poster.jpg" alt="" width="1280" height="720" fetchpriority="high"><video id="hero-film" data-media="ambient" data-observe="inizio" muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" tabindex="-1"><source src="assets/hero.mp4" type="video/mp4"></video></div>
+      <div class="hero-title-wrap"><p class="eyebrow">Una terra. Una tavola. Un incontro.</p><h1 id="hero-title">Dante</h1></div>
+      <div class="hero-bottom"><p class="hero-tagline">La Calabria,<br><em>a tavola.</em></p><div class="hero-actions"><a class="button button-cream" href="#prenota" data-book>Prenota un tavolo <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#menu">Guarda il menu <span aria-hidden="true">↓</span></a></div></div>
+      <div class="hero-filmbar"><div class="chapters" aria-label="Scene del video di apertura" hidden><button class="chapter is-active" data-time="0" aria-label="Scena 1, le radici" aria-current="true"><span>01</span> Le radici<i></i></button><button class="chapter" data-time="7" aria-label="Scena 2, i gesti"><span>02</span> I gesti<i></i></button><button class="chapter" data-time="13" aria-label="Scena 3, insieme"><span>03</span> Insieme<i></i></button></div></div>
+      <a class="hero-scroll" href="#cucina" aria-label="Scopri la cucina"><span aria-hidden="true">↓</span></a>
+    </section>
+
+    <!-- CAMINO: narrazione asimmetrica. Video verticale e fotografia ravvicinata. -->
+    <section class="kitchen section-pad" id="cucina" aria-labelledby="kitchen-title">
+      <div class="section-index"><span>01 / La cucina</span><span>Il sapore delle radici</span></div>
+      <div class="kitchen-layout">
+        <figure class="kitchen-film reveal"><div class="media-frame portrait"><img src="assets/cucina-poster.jpg" width="540" height="960" loading="lazy" alt="Pasta e frutti di mare in preparazione"><video id="kitchen-film" data-media="ambient" muted loop playsinline preload="none" poster="assets/cucina-poster.jpg" aria-hidden="true" tabindex="-1"><source data-src="assets/cucina.mp4" type="video/mp4"></video></div><figcaption><span>In cucina</span><span>Il gusto prende forma</span></figcaption></figure>
+        <div class="kitchen-copy reveal"><p class="eyebrow">Pasta fatta in casa</p><h2 id="kitchen-title">Le mani.<br>Le radici.<br><em>La Calabria.</em></h2><p class="body-copy">Ci sono sapori che raccontano da dove veniamo. La pasta fatta in casa, i prodotti tipici calabresi, una cucina da ritrovare e condividere.</p><a class="text-link" href="#piatti">Un assaggio di Dante <span aria-hidden="true">↗</span></a></div>
+        <figure class="pasta-inset reveal"><div class="photo-frame"><img src="assets/pasta-fresca.webp" width="1122" height="1402" loading="lazy" alt="Pasta fresca infarinata"></div><figcaption>La pasta, prima del piatto.</figcaption></figure>
+        <div class="kitchen-signature reveal"><span aria-hidden="true">D.</span><p>La semplicità<br>ha una bella storia.</p></div>
+      </div>
+    </section>
+
+    <!-- ROMA: grandi campi fotografici, nessun contenitore a scheda. -->
+    <section class="dishes section-pad" id="piatti" aria-labelledby="dishes-title">
+      <div class="section-index"><span>02 / I piatti</span><a href="#menu">Scopri il menu ↗</a></div>
+      <div class="section-heading reveal"><h2 id="dishes-title">Prima, con<br><em>gli occhi.</em></h2><p class="body-copy">Un sugo che avvolge, il profumo del mare, l'ultimo gesto prima di servire. Il piacere comincia qui.</p></div>
+      <div class="dish-grid">
+        <article class="dish reveal"><div class="photo-frame dish-photo"><img src="assets/gnocchi.webp" width="1672" height="941" loading="lazy" alt="Gnocchi al pomodoro con formaggio aggiunto al momento"></div><div class="dish-label"><span>01 / Dalla terra</span><span>Primi</span></div><h3>Gnocchi al pomodoro</h3><p>Pomodoro, basilico e una pioggia di formaggio.</p></article>
+        <article class="dish reveal"><div class="photo-frame dish-photo"><img src="assets/scampi.webp" width="1672" height="941" loading="lazy" alt="Linguine agli scampi servite a tavola"></div><div class="dish-label"><span>02 / Dal mare</span><span>Primi</span></div><h3>Linguine agli scampi</h3><p>Il mare nel piatto, il piacere di stare insieme.</p></article>
+        <article class="dish reveal"><div class="photo-frame dish-photo"><img src="assets/frutti-di-mare.webp" width="1672" height="941" loading="lazy" alt="Linguine ai frutti di mare impiattate dalla padella"></div><div class="dish-label"><span>03 / In padella</span><span>Primi</span></div><h3>Linguine ai frutti di mare</h3><p>Pasta, frutti di mare e il calore della cucina.</p></article>
+        <article class="dish reveal"><div class="photo-frame dish-photo"><img src="assets/calamari.webp" width="1672" height="941" loading="lazy" alt="Calamari e piselli al sugo con pane tostato"></div><div class="dish-label"><span>04 / Da assaporare</span><span>Secondi</span></div><h3>Calamari e piselli</h3><p>Un sugo da raccogliere, fino all'ultimo boccone.</p></article>
+      </div>
+    </section>
+
+    <section class="craft section-pad" aria-labelledby="craft-title">
+      <div class="section-index"><span>I dettagli fanno il piatto</span><span>Dalla cucina alla tavola</span></div>
+      <div class="craft-heading reveal"><h2 id="craft-title">L'ultimo<br><em>gesto.</em></h2><p class="body-copy">Il tempo di una preparazione.<br>La cura di un dettaglio.</p></div>
+      <div class="craft-grid">
+        <figure class="reveal"><div class="media-frame landscape"><img src="assets/secondi-poster.jpg" width="960" height="540" loading="lazy" alt="Carne e patate al momento dell'impiattamento"><video id="secondi-film" data-media="ambient" muted loop playsinline preload="none" poster="assets/secondi-poster.jpg" aria-hidden="true" tabindex="-1"><source data-src="assets/secondi.mp4" type="video/mp4"></video></div><figcaption><span>01 / L'impiattamento</span><span>Il tocco finale</span></figcaption></figure>
+        <figure class="reveal"><div class="media-frame landscape"><img src="assets/dessert-poster.jpg" width="960" height="540" loading="lazy" alt="Decorazione di un dessert al cioccolato"><video id="dessert-film" data-media="ambient" muted loop playsinline preload="none" poster="assets/dessert-poster.jpg" aria-hidden="true" tabindex="-1"><source data-src="assets/dessert.mp4" type="video/mp4"></video></div><figcaption><span>02 / Una nota dolce</span><span>Il piacere di concludere</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
+      <div class="section-index"><span>03 / Il menu</span><span>A ogni appetito</span></div>
+      <div class="menu-layout"><div class="menu-intro reveal"><h2 id="menu-title">Lasciati<br><em>tentare.</em></h2><p class="body-copy">Dalla pasta al calice.<br>Scegli il tuo modo di stare a tavola.</p><p class="menu-note">Carta in anteprima. Proposte, prezzi e disponibilità saranno confermati dal locale.</p><a class="text-link" href="#prenota" data-book>Prenota un tavolo <span aria-hidden="true">↗</span></a></div>
+        <div class="menu-accordion reveal">
+          <details open><summary><span class="menu-number">01</span><h3>Primi</h3><span class="details-icon" aria-hidden="true"></span></summary><div class="menu-items"><div class="menu-item"><h4>Gnocchi al pomodoro</h4><p>Pomodoro, basilico e formaggio.</p></div><div class="menu-item"><h4>Linguine agli scampi</h4><p>Un incontro tra pasta e mare.</p></div><div class="menu-item"><h4>Linguine ai frutti di mare</h4><p>Dalla padella al piatto.</p></div></div></details>
+          <details><summary><span class="menu-number">02</span><h3>Secondi</h3><span class="details-icon" aria-hidden="true"></span></summary><div class="menu-items"><div class="menu-item"><h4>Calamari e piselli</h4><p>Al sugo, con pane tostato.</p></div><p class="menu-note">Le altre proposte saranno disponibili nella carta definitiva.</p></div></details>
+          <details><summary><span class="menu-number">03</span><h3>Vini & distillati</h3><span class="details-icon" aria-hidden="true"></span></summary><div class="menu-items"><p class="body-copy">Una collezione da esplorare, tra un abbinamento a tavola e il piacere di un dopocena.</p><a class="text-link" href="#cantina">Entra in cantina <span aria-hidden="true">↗</span></a><p class="menu-note">Etichette, annate e disponibilità da confermare.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Il video vini già approvato rimane a pieno sfondo. -->
+    <section class="cellar section-pad" id="cantina" aria-labelledby="cellar-title">
+      <span id="locale" class="anchor-alias" aria-hidden="true"></span>
+      <div class="cellar-background" aria-hidden="true"><img src="assets/vino-poster.jpg" width="1280" height="720" loading="lazy" alt=""><video id="wine-film" data-media="ambient" data-observe="cantina" muted loop playsinline preload="none" poster="assets/vino-poster.jpg" tabindex="-1"><source data-src="assets/vino.mp4" type="video/mp4"></video></div>
+      <div class="section-index"><span>04 / La cantina</span><span>Vini & distillati</span></div>
+      <div class="cellar-heading reveal"><p class="eyebrow">Il piacere di scegliere</p><h2 id="cellar-title">Il tempo<br>di un <em>calice.</em></h2><p class="body-copy">L'aperitivo, un vino a tavola, un distillato per chiudere la serata. C'è un momento per ogni calice.</p></div>
+      <div class="cellar-bottom"><a class="text-link" href="#collezione">Esplora la collezione <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="collection section-pad" id="collezione" aria-labelledby="collection-title"><div class="collection-copy reveal"><p class="eyebrow">Vini, bollicine e distillati</p><h2 id="collection-title">Una bella<br><em>compagnia.</em></h2><p class="body-copy">Il gusto di soffermarsi.<br>Una collezione che invita a scoprire.</p></div><div class="collection-images"><figure class="reveal"><div class="photo-frame"><img src="assets/collezione.webp" width="1122" height="1402" loading="lazy" alt="Collezione di vini e distillati su mensole illuminate"></div><figcaption>La collezione</figcaption></figure><figure class="reveal"><div class="photo-frame"><img src="assets/cantina.webp" width="1122" height="1402" loading="lazy" alt="Dettaglio delle bottiglie in esposizione"></div><figcaption>Le sfumature del calice</figcaption></figure></div></section>
+
+    <section class="hospitality" id="ospitalita" aria-labelledby="hospitality-title"><div class="hospitality-photo"><img src="assets/scampi.webp" width="1672" height="941" loading="lazy" alt="Un piatto di linguine servito tra persone a tavola"></div><div class="hospitality-copy reveal"><p class="eyebrow">05 / A tavola</p><h2 id="hospitality-title">Il gusto<br>di stare<br><em>insieme.</em></h2><p class="body-copy">Un piatto da raccontare.<br>Una conversazione che continua.<br>Un altro buon motivo per restare.</p><a class="text-link" href="#prenota" data-book>Il tuo prossimo incontro <span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="visit section-pad" id="contatti" aria-labelledby="visit-title"><div class="section-index"><span>06 / Vieni a trovarci</span><span>Osteria Dante</span></div><div class="visit-grid"><div class="visit-title reveal"><h2 id="visit-title">Ci vediamo<br><em>da Dante.</em></h2><p class="body-copy">Dall'aperitivo al dopocena,<br>passando per il piacere della tavola.</p></div><div class="visit-info reveal"><p class="eyebrow">Organizza la tua visita</p><div id="contact-details" hidden></div><p id="contact-pending" class="body-copy">Recapiti, posizione e orari saranno disponibili nella versione definitiva. Intanto, scopri il percorso di richiesta tavolo.</p><div class="contact-actions"><a class="text-link" id="call-link" hidden>Chiama <span aria-hidden="true">↗</span></a><a class="text-link" id="maps-link" target="_blank" rel="noopener noreferrer" hidden>Come arrivare <span aria-hidden="true">↗</span></a></div><a class="text-link" href="#prenota" data-book>Richiedi un tavolo <span aria-hidden="true">↗</span></a></div></div></section>
+    <section class="reservation section-pad" id="prenota" aria-labelledby="reservation-title"><div class="logo-dark reveal"><img src="assets/dantenero.png" width="447" height="447" alt="Dante"></div><h2 class="reveal" id="reservation-title">C'è un posto<br><em>per te.</em></h2><a class="button button-wine reveal" href="#contatti" data-book>Prenota un tavolo <span aria-hidden="true">↗</span></a><p class="small-note">Percorso dimostrativo. Nessuna richiesta viene inviata.</p><noscript><p class="small-note">Attiva JavaScript per provare la richiesta tavolo.</p></noscript></section>
+  </main>
+
+  <footer class="footer"><div class="footer-top"><p>Osteria tipica calabrese<br>Bar · Lounge bar</p><nav aria-label="Collegamenti nel footer"><a href="#cucina">La cucina</a><a href="#menu">Il menu</a><a href="#cantina">La cantina</a><a href="#contatti">Contatti</a></nav><a class="back-top" href="#inizio" aria-label="Torna all'inizio">↑</a></div><p class="footer-wordmark" aria-hidden="true">Dante</p><div class="footer-bottom"><span>Il gusto delle nostre radici.</span></div></footer>
+
+
+  <dialog class="booking" id="booking" aria-labelledby="booking-title" aria-describedby="booking-note"><div class="dialog-top"><span class="eyebrow">Osteria Dante</span><button class="icon-close" data-close="booking" aria-label="Chiudi richiesta tavolo">×</button></div><h2 id="booking-title">Un tavolo<br><em>per te.</em></h2><p id="booking-note" class="small-note">Prova la richiesta: i dati restano in questa schermata e non vengono inviati o salvati.</p><form id="booking-form" hidden><label>Il tuo nome<input id="guest-name" name="name" type="text" autocomplete="off" placeholder="Puoi usare un nome di fantasia" maxlength="60" required></label><div class="form-row"><label>Data preferita<input id="guest-date" name="date" type="date" required></label><label>Persone<select id="guest-count" name="guests" required><option value="2">2 persone</option><option value="1">1 persona</option><option value="3">3 persone</option><option value="4">4 persone</option><option value="5">5 persone</option><option value="6">6 persone</option><option value="7">7 persone</option><option value="8">8 persone</option><option value="9">9 o più persone</option></select></label></div><label>Orario preferito<input id="guest-time" name="time" type="time" required></label><p class="field-note">La scelta non verifica orari di apertura o disponibilità.</p><button class="button button-wine" type="submit">Visualizza riepilogo <span aria-hidden="true">↗</span></button></form><div id="booking-review" hidden><p class="eyebrow">La tua richiesta</p><dl><div><dt>Nome</dt><dd data-summary="name"></dd></div><div><dt>Data</dt><dd data-summary="date"></dd></div><div><dt>Orario</dt><dd data-summary="time"></dd></div><div><dt>Persone</dt><dd data-summary="guests"></dd></div></dl><div class="review-actions"><button class="button button-wine" id="booking-confirm" type="button">Simula richiesta ↗</button><button class="text-link" id="booking-edit" type="button">Modifica</button></div></div><div id="booking-success" hidden role="status"><span class="success-mark" aria-hidden="true">✓</span><h3>Il percorso è completo.</h3><p>Questa era una simulazione.<br>Nessuna richiesta è stata inviata e nessun tavolo è stato prenotato.</p><button class="button button-wine" data-close="booking" type="button">Torna al sito</button></div></dialog>
+
+  <!-- FOOTER EDITORIALE -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-container">
+    
+    <!-- 1. Logo a sinistra (stesso usato in alto) -->
+    <div class="footer-brand">
+      <img src="assets/dantenero.png" alt="Dante" class="footer-logo-img">
+    </div>
+
+    <!-- 2. Testo centrale con link che apre il modale -->
+    <div class="footer-center">
+      <p class="footer-claim">Una proposta da costruire insieme.</p>
+      <button type="button" class="btn-footer-link" id="btn-open-notes">
+        Fonti, immagini e note sulla demo <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+
+    <!-- 3. Pulsante Torna su a destra -->
+    <div class="footer-actions">
+      <a href="#top" class="btn-scroll-top" aria-label="Torna all'inizio della pagina">
+        <span aria-hidden="true">↑</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- MODALE "FONTI, IMMAGINI E NOTE SULLA DEMO" -->
+<div class="notes-modal-backdrop" id="notes-modal" aria-hidden="true">
+  <div class="notes-modal-dialog" role="dialog" aria-labelledby="notes-modal-title">
+    <button type="button" class="btn-close-notes" id="btn-close-notes" aria-label="Chiudi finestra note">×</button>
+
+    <div class="notes-modal-content">
+      <span class="notes-eyebrow">Trasparenza prima di tutto</span>
+      <h3 id="notes-modal-title" class="notes-title">Fonti & crediti.</h3>
+
+      <p class="notes-lead">
+        Demo indipendente, non approvata da Dante Osteria tipica calabrese. Identità visiva e struttura proposte da concordare con i titolari.
+      </p>
+
+      <!-- Sezione 1: Storia e Identità -->
+      <div class="notes-block">
+        <h4 class="notes-heading">L'esperienza Dante</h4>
+        <p>
+          I testi descrittivi e la struttura del sito sono stati elaborati in forma di bozza dimostrativa per valorizzare il marchio Dante Osteria tipica calabrese. Nella versione finale i contenuti saranno convalidati e approvati direttamente dal titolare di Dante Osteria tipica calabrese.
+        </p>
+      </div>
+
+      <!-- Sezione 2: Fotografie e Video -->
+      <div class="notes-block">
+        <h4 class="notes-heading">Fotografie e video</h4>
+        <p>
+          Le riprese e le immagini inserite sono materiali pubblici trovabili online o mock-up illustrativi utilizzati al solo scopo di mostrare la resa del layout. Prima della pubblicazione online ufficiale occorrerà la formale autorizzazione del titolare all'utilizzo del materiale multimediale.
+        </p>
+      </div>
+
+      <!-- Sezione 3: Privacy e Funzionamento -->
+      <div class="notes-block">
+        <h4 class="notes-heading">Privacy e funzionamento</h4>
+        <p>
+          Il codice di questa demo non imposta cookie di profilazione, non raccoglie dati personali, non effettua analisi di tracciamento e non invia le richieste del modulo (simulazione dimostrativa). Immagini, video e font sono ospitati localmente o via CDN ad accesso libero.
+        </p>
+        <p class="notes-sub">
+          Prima dell'eventuale messa in produzione definitiva occorreranno l'approvazione formale dei contenuti, la verifica dei diritti e la redazione dell'informativa privacy conforme al GDPR.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
