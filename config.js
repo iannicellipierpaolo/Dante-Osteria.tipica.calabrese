@@ -1,10 +1,11 @@
-/* Compilare solo con dati confermati. I valori vuoti vengono omessi
-   dall'interfaccia; nessun numero o indirizzo fittizio viene pubblicato. */
+/* Compilare solo con dati confermati. I campi vuoti mostrano avvisi
+   di aggiornamento; i relativi collegamenti restano nascosti. */
 window.DANTE_CONFIG = Object.freeze({
   location: '',
   address: '',
   phone: '',
   email: '',
   hours: '',
-  mapsUrl: ''
+  mapsUrl: '',
+  tripadvisorUrl: '',
 });
