@@ -1,3 +1,59 @@
+/* ============================================================
+   FONT LOCALI DI RISERVA
+   I font originali Arial e Times New Roman rimangono prioritari.
+   Se non disponibili, il browser usa i font web locali:
+   Arimo (Arial) e Tinos (Times New Roman).
+   Installazione dei file: bash installa-font.sh
+   ============================================================ */
+
+@font-face {
+  font-family: 'Dante Arimo';
+  src: url('./font/Arimo.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dante Arimo';
+  src: url('./font/Arimo-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dante Tinos';
+  src: url('./font/Tinos-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dante Tinos';
+  src: url('./font/Tinos-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dante Tinos';
+  src: url('./font/Tinos-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dante Tinos';
+  src: url('./font/Tinos-BoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --paper: #f4efe5;
 
@@ -35,9 +91,9 @@
 
   --link-hover: var(--champagne);
 
-  --serif: 'Times New Roman', Times, serif;
+  --serif: 'Times New Roman', 'Dante Tinos', Times, serif;
 
-  --sans: Arial, Helvetica, sans-serif;
+  --sans: Arial, 'Dante Arimo', Helvetica, sans-serif;
 
   --gutter: clamp(24px, 5.5vw, 96px);
 
