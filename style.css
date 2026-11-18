@@ -91,9 +91,9 @@
 
   --link-hover: var(--champagne);
 
-  --serif: 'Times New Roman', 'Dante Tinos', Times, serif;
+  --serif: 'Dante Tinos', 'Times New Roman', Times, serif;
 
-  --sans: Arial, 'Dante Arimo', Helvetica, sans-serif;
+  --sans: 'Dante Arimo', Arial, Helvetica, sans-serif;
 
   --gutter: clamp(24px, 5.5vw, 96px);
 
