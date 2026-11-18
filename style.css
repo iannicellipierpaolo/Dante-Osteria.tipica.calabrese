@@ -1,11 +1,3 @@
-/* ============================================================
-   FONT LOCALI DI RISERVA
-   I font originali Arial e Times New Roman rimangono prioritari.
-   Se non disponibili, il browser usa i font web locali:
-   Arimo (Arial) e Tinos (Times New Roman).
-   Installazione dei file: bash installa-font.sh
-   ============================================================ */
-
 @font-face {
   font-family: 'Dante Arimo';
   src: url('./font/Arimo.ttf') format('truetype');
@@ -91,9 +83,9 @@
 
   --link-hover: var(--champagne);
 
-  --serif: 'Dante Tinos', 'Times New Roman', Times, serif;
+  --serif: 'Times New Roman', 'Dante Tinos', Times, serif;
 
-  --sans: 'Dante Arimo', Arial, Helvetica, sans-serif;
+  --sans: , Arial, 'Dante Arimo' Helvetica, sans-serif;
 
   --gutter: clamp(24px, 5.5vw, 96px);
 
